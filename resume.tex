@@ -1,0 +1,263 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks=true,urlcolor=Sepia]{hyperref}
+\usepackage{titlesec}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+
+\usepackage[brazilian]{babel}
+
+%Tipos de Fontes
+
+%------------------------------
+% \usepackage{tgpagella,eulervm}
+
+\usepackage{tgadventor}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+% \usepackage{tgbonum}
+% \usepackage[T1]{fontenc}
+
+% \usepackage[default]{comfortaa}
+% \usepackage[T1]{fontenc}
+%\usepackage[sfdefault]{overlock}
+%\usepackage{addfont}
+%\addfont{OT1}{tap}{\tapir}
+
+%\usepackage[defaultfam,light,tabular,lining,alternates]{montserrat} %% Option 'defaultfam'
+%%% only if the base font of the document is to be sans serig
+%\usepackage[T1]{fontenc}
+%\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+
+%Fontes
+%\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\sfdefault}{ppl}
+
+
+%Definindo o comando de entrada de itens
+
+% 1 - Data final
+% 2 - Data inicial
+% 3 - Cargo
+% 4 - Empresa
+% 5 - Descrição
+
+
+\newcommand{\entry}[5]{
+	\begin{minipage}[t]{.1\textwidth}
+		\begin{flushright}
+			\hfill
+			{\textsc{#1}}
+
+			{\textsc{#2}}
+		\end{flushright}
+	\end{minipage}
+	\hfill\textcolor{Sepia}{\vline}\hfill
+	\begin{minipage}[t]{.825\textwidth}
+
+		#3
+		
+		\textcolor{Sepia}{\textbf{#4}}
+		
+		\footnotesize{#5}
+
+	\end{minipage} \\ 
+	\vspace{.5cm}
+
+}
+
+% \newcommand{\entry}[5]{
+% 	\begin{minipage}[t]{.1\textwidth}
+% 	\end{minipage}
+% 	\textcolor{Sepia}{\vline}
+% 	\begin{minipage}[t]{.825\textwidth}
+
+% 		#3 \hfill \textbf{\textsc{#1 \rule[0.2em]{1em}{1pt} #2 }}
+		
+% 		\textcolor{Sepia}{\textbf{#4}}
+		
+% 		\footnotesize{#5}
+
+% 	\end{minipage} \\ 
+% 	\vspace{.5cm}
+
+% }
+
+
+% Espaçamento e formatação de seções
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}%
+	[
+		\vspace*{-0.667\baselineskip} % Espaço vertical entre texto do título e titlerule.
+		\textcolor{Sepia} % Cor do texto do título.
+		{\titlerule} % Adiciona linha abaixo do título.
+	]
+
+\titlespacing{\section}{0pt}{0pt}{0pt}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\pagestyle{fancy} % tipo de header e footer
+\fancyhf{} 
+\rfoot{\scriptsize{Atualizado em \today}}
+\renewcommand{\headrulewidth}{0pt}
+
+% HEADER ----
+
+\thispagestyle{empty}
+
+\begin{center}
+	
+	{\LARGE Lucas C. L. do Carmo, Msc.}
+	
+	\vspace{6pt}
+	\arrayrulecolor{Sepia}
+	\begin{tabular}{c|c|c}
+		(41) 991 216 285 & \textcolor{Sepia}{\underline{\href{mailto:msclucaslima@gmail.com}{msclucaslima@gmail.com}}} & Curitiba - PR
+	\end{tabular}
+		
+	
+	% (41) 991 216 285
+	% \textcolor{Sepia}{\underline{\href{mailto:msclucaslima@gmail.com}{msclucaslima@gmail.com}}}
+	% Curitiba - PR
+	\vspace{6pt}
+	
+\end{center}
+	
+% BODY ----------
+
+\section{Experiência}
+
+\entry{atual}{mar/2021}
+{Garantia da Qualidade e Controle de Qualidade}
+{Atsum / Cosmetici }
+{Atuo como Gerente da Qualidade tanto de insumos quanto de produto e também sou responsável pela
+validação de equipamentos e diversos processos de produção.
+Participo do desenvolvimento do Sistema de Gestão da Qualidade e no Controle de Qualidade de Processos.}
+
+\entry{jan/2021}{jun/2020}
+{Consultoria técnico-científica}
+{MC Química}
+{Desenvolvimento de produtos de natureza farmacêutica e cosmética, 
+caracterização de matérias-primas utilizando técnicas como reologia;
+cromatografia de exclusão de tamanho e medidas de potencial zeta.}
+
+\entry{mar/2020}{ago/2018}
+{Pesquisador Terceirizado}
+{Grupo Boticário}
+{Desenvolvimento de metodologia analítica para predição de estabilidade
+de formulações cosméticas utilizando reologia,
+caracterização e avaliação da estabilidade acelerada e de prateleira
+de formulações cosméticas.}
+
+\entry{mar/2018}{set/2017}
+{Farmacêutico}
+{Farmácias Panvel}
+{Responsável Técnico.}
+
+\entry{mar/2016}{jul/2015}
+{Assistente de Pesquisa}
+{Monash University}
+{Desenvolvimento e simulação computacional da estabilidade 
+de estruturas peptídicas cíclicas sintetizadas em laboratório 
+com finalidade de produção de nanomateriais com compatibilidade biológica.}
+
+\entry{jun/2014}{mar/2012}
+{Iniciação Científica}
+{Universidade Federal do Paraná}
+{Desenvolvimento de projeto de pesquisa, 
+manutenção do laboratório, 
+produção e utilização de enzimas para processos biotecnológicos.}
+
+
+\section{Formação Acadêmica}
+
+\entry{mar/2020}{mar/2018}
+{Mestrado em Ciências Farmacêuticas}
+{Universidade Federal do Paraná / Grupo BIOPOL}
+{A dissertação intitulada: \emph{Emulsion physical stability prediction by means of rheology}
+foi desenvolvida em parceria com o Grupo Boticário onde foi avaliada a estabilidade
+de formulações cosméticas ao longo do tempo e correlacionado com parâmetros 
+físico-químicos para aperfeiçoamento de métodologias para predição de estabilidade de cremes.}
+
+\entry{set/2017}{ago/2011}
+{Bacharelado em Farmácia}
+{Universidade Federal do Paraná}
+{Curitiba - PR.}
+
+\entry{mar/2016}{mar/2015}
+{Bacharelado em Ciências Farmacêuticas}
+{Monash University}
+{Melbourne - Austrália.}
+
+\section{Trabalho Voluntário e Estágios}
+
+\entry{jan/2021}{mar/2020}
+{Assistente Técnico}
+{Universidade Federal do Paraná}
+{Produção, desenvolvimento e controle de qualidade de produtos higienizantes 
+para uso humano para serem usados no combate à COVID-19.}
+
+\entry{jul/2017}{jan/2017}
+{Estágio}
+{Hospital de Clínicas}
+{Estágio em análises clínicas nos setores de hematologia, 
+imunoquímica, virologia, banco de sangue e bacteriologia.}
+
+\entry{jul/2017}{out/2016}
+{Estágio em Docência}
+{Universidade Federal do Paraná}
+{Introdução à docência, programa da universidade 
+na disciplina de Enzimologia e tecnologia de fermentações.}
+
+\entry{fev/2017}{nov/2016}
+{Estágio}
+{Farmácia Magistral}
+{Controle de qualidade de matérias primas, 
+formulação de formas farmacêuticas sólidas, 
+semi-sólidas e líquidas, dispensação de fórmulas, 
+revisão de prescrições.}
+
+\entry{jan/2017}{mar/2016}
+{Estágio}
+{Panvel Farmácias}
+{Dispensação de medicamentos, 
+emissão de relatórios à Vigilância Sanitária, 
+controle de armazenamento de medicamentos e 
+armazenamento de medicamentos controlados.}
+
+
+
+\section{Habilidades e Aptidões}
+
+\entry{}{}{Inglês}{Fluente}{}
+
+\entry{}{}{Reologia}{Especialista}{Desenvolvi técnicas de caracterização reológica para predição de estabilidade utilizando o equipamento de ponta como o TA Instruments DHR-1 e menos avançados como o Thermo Haake RheoStress RS1.}
+
+\renewcommand{\labelitemi}{\textendash}
+
+\entry{}{}{Técnicas de análise}{Equipamentos laboratoriais}{
+	\begin{itemize}
+	\item Análise de tamanho de partículas por microscopia óptica e difração laser utilizando Malvern Mastersizer 3000;
+	\item Análises de microcalorimetria diferencial;
+	\item Análise de potencial zeta para suspensões e emulsões;
+	\item Noções básicas de cromatografia por exclusão de tamanho.
+	\end{itemize}}
+
+\entry{}{}{Pacote de Ferramentas}{Microsoft Word, Excel (intermediário)}{}
+
+\entry{}{}{Outras}{Análise e visualização de dados utilizando a linguagem R.}{}
+
+
+
+
+\end{document}
