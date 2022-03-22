@@ -1,7 +1,9 @@
 \documentclass[a4paper, 11pt]{article}
 \usepackage[dvipsnames]{xcolor}
+
+\definecolor{Accent}{RGB}{ 6, 28, 68}
 \usepackage[utf8]{inputenc}
-\usepackage[colorlinks=true,urlcolor=Sepia]{hyperref}
+\usepackage[colorlinks=true,urlcolor=Accent]{hyperref}
 \usepackage{titlesec}
 \usepackage[margin=1.5cm]{geometry}
 \usepackage{longtable}
@@ -12,9 +14,13 @@
 \usepackage{amsfonts}
 \usepackage[brazilian]{babel}
 
-\usepackage{tgadventor}
-\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+% \usepackage{tgadventor}
+% \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+% \usepackage[T1]{fontenc}
+\usepackage[default]{sourcesanspro}
 \usepackage[T1]{fontenc}
+
+
 
 %Definindo o comando de entrada de itens
 
@@ -33,12 +39,12 @@
 			{\textsc{#2}}
 		\end{flushright}
 	\end{minipage}
-	\hfill\textcolor{Sepia}{\vline}\hfill
+	\hfill\textcolor{Accent}{\vline}\hfill
 	\begin{minipage}[t]{.825\textwidth}
 
 		#3
 		
-		\textcolor{Sepia}{\textbf{#4}}
+		\textcolor{Accent}{\textbf{#4}}
 		
 		\footnotesize{#5}
 
@@ -52,7 +58,7 @@
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}%
 	[
 		\vspace*{-0.667\baselineskip} % Espaço vertical entre texto do título e titlerule.
-		\textcolor{Sepia} % Cor do texto do título.
+		\textcolor{Accent} % Cor do texto do título.
 		{\titlerule} % Adiciona linha abaixo do título.
 	]
 
