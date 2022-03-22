@@ -1,111 +1,3 @@
-\documentclass[a4paper, 11pt]{article}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[utf8]{inputenc}
-\usepackage[colorlinks=true,urlcolor=Sepia]{hyperref}
-\usepackage{titlesec}
-\usepackage[margin=1.5cm]{geometry}
-\usepackage{longtable}
-\usepackage{graphicx}
-\usepackage{colortbl}
-\usepackage{makecell}
-\usepackage{fancyhdr}
-\usepackage{amsfonts}
-
-\usepackage[brazilian]{babel}
-
-%Tipos de Fontes
-
-%------------------------------
-% \usepackage{tgpagella,eulervm}
-
-\usepackage{tgadventor}
-\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
-\usepackage[T1]{fontenc}
-
-% \usepackage{tgbonum}
-% \usepackage[T1]{fontenc}
-
-% \usepackage[default]{comfortaa}
-% \usepackage[T1]{fontenc}
-%\usepackage[sfdefault]{overlock}
-%\usepackage{addfont}
-%\addfont{OT1}{tap}{\tapir}
-
-%\usepackage[defaultfam,light,tabular,lining,alternates]{montserrat} %% Option 'defaultfam'
-%%% only if the base font of the document is to be sans serig
-%\usepackage[T1]{fontenc}
-%\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
-
-
-%Fontes
-%\renewcommand{\familydefault}{\sfdefault}
-%\renewcommand{\sfdefault}{ppl}
-
-
-%Definindo o comando de entrada de itens
-
-% 1 - Data final
-% 2 - Data inicial
-% 3 - Cargo
-% 4 - Empresa
-% 5 - Descrição
-
-
-\newcommand{\entry}[5]{
-	\begin{minipage}[t]{.1\textwidth}
-		\begin{flushright}
-			\hfill
-			{\textsc{#1}}
-
-			{\textsc{#2}}
-		\end{flushright}
-	\end{minipage}
-	\hfill\textcolor{Sepia}{\vline}\hfill
-	\begin{minipage}[t]{.825\textwidth}
-
-		#3
-		
-		\textcolor{Sepia}{\textbf{#4}}
-		
-		\footnotesize{#5}
-
-	\end{minipage} \\ 
-	\vspace{.5cm}
-
-}
-
-% \newcommand{\entry}[5]{
-% 	\begin{minipage}[t]{.1\textwidth}
-% 	\end{minipage}
-% 	\textcolor{Sepia}{\vline}
-% 	\begin{minipage}[t]{.825\textwidth}
-
-% 		#3 \hfill \textbf{\textsc{#1 \rule[0.2em]{1em}{1pt} #2 }}
-		
-% 		\textcolor{Sepia}{\textbf{#4}}
-		
-% 		\footnotesize{#5}
-
-% 	\end{minipage} \\ 
-% 	\vspace{.5cm}
-
-% }
-
-
-% Espaçamento e formatação de seções
-
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}%
-	[
-		\vspace*{-0.667\baselineskip} % Espaço vertical entre texto do título e titlerule.
-		\textcolor{Sepia} % Cor do texto do título.
-		{\titlerule} % Adiciona linha abaixo do título.
-	]
-
-\titlespacing{\section}{0pt}{0pt}{0pt}
-
-\begin{document}
-\pagenumbering{gobble}
-
 \pagestyle{fancy} % tipo de header e footer
 \fancyhf{} 
 \rfoot{\scriptsize{Atualizado em \today}}
@@ -124,11 +16,7 @@
 	\begin{tabular}{c|c|c}
 		(41) 991 216 285 & \textcolor{Sepia}{\underline{\href{mailto:msclucaslima@gmail.com}{msclucaslima@gmail.com}}} & Curitiba - PR
 	\end{tabular}
-		
-	
-	% (41) 991 216 285
-	% \textcolor{Sepia}{\underline{\href{mailto:msclucaslima@gmail.com}{msclucaslima@gmail.com}}}
-	% Curitiba - PR
+
 	\vspace{6pt}
 	
 \end{center}
@@ -137,12 +25,26 @@
 
 \section{Experiência}
 
-\entry{atual}{mar/2021}
-{Garantia da Qualidade e Controle de Qualidade}
-{Atsum / Cosmetici }
-{Atuo como Gerente da Qualidade tanto de insumos quanto de produto e também sou responsável pela
-validação de equipamentos e diversos processos de produção.
-Participo do desenvolvimento do Sistema de Gestão da Qualidade e no Controle de Qualidade de Processos.}
+\entry{atual}{ago/2021}
+{Analista de Controle de Qualidade Pleno}
+{Cosmetici}
+{
+	Monitoramento de processo de fabricação e envase.
+	Acompanhamento de não-conformidades e implementação de
+	sistema de melhoria contínua e gerenciamento de riscos.
+	Atuo na atualização de procedimentos e protocolos de validação dos setores
+	de controle de qualidade e de fabricação.
+
+}
+
+\entry{ago/2021}{mar/2021}
+{Analista de Controle de Qualidade Junior}
+{Atsum / Cosmetici}
+{
+	Análise físico-química de matérias-primas e materiais de embalagem.
+	Acompanhamento de processos de fabricação, envase e controle de qualidade do
+	produto em granel.
+}
 
 \entry{jan/2021}{jun/2020}
 {Consultoria técnico-científica}
@@ -177,7 +79,6 @@ com finalidade de produção de nanomateriais com compatibilidade biológica.}
 {Desenvolvimento de projeto de pesquisa, 
 manutenção do laboratório, 
 produção e utilização de enzimas para processos biotecnológicos.}
-
 
 \section{Formação Acadêmica}
 
@@ -235,8 +136,6 @@ emissão de relatórios à Vigilância Sanitária,
 controle de armazenamento de medicamentos e 
 armazenamento de medicamentos controlados.}
 
-
-
 \section{Habilidades e Aptidões}
 
 \entry{}{}{Inglês}{Fluente}{}
@@ -250,7 +149,7 @@ armazenamento de medicamentos controlados.}
 	\item Análise de tamanho de partículas por microscopia óptica e difração laser utilizando Malvern Mastersizer 3000;
 	\item Análises de microcalorimetria diferencial;
 	\item Análise de potencial zeta para suspensões e emulsões;
-	\item Noções básicas de cromatografia por exclusão de tamanho.
+	\item Cromatografia por exclusão de tamanho.
 	\end{itemize}}
 
 \entry{}{}{Pacote de Ferramentas}{Microsoft Word, Excel (intermediário)}{}
@@ -258,6 +157,3 @@ armazenamento de medicamentos controlados.}
 \entry{}{}{Outras}{Análise e visualização de dados utilizando a linguagem R.}{}
 
 
-
-
-\end{document}
