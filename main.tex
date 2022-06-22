@@ -14,6 +14,7 @@
 \usepackage{fancyhdr}
 \usepackage{amsfonts}
 \usepackage[brazilian]{babel}
+\usepackage{ifthen}
 
 % \usepackage{tgadventor}
 % \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
@@ -24,7 +25,11 @@
 
 
 %Definindo o comando de entrada de itens
+\newcommand{\highlight}[1]{
+	\textbf{\textcolor{Accent}{#1}}
+}
 
+\newcommand{\entry}[6]{
 % 1 - Data final
 % 2 - Data inicial
 % 3 - Cargo
@@ -32,7 +37,6 @@
 % 5 - Descrição
 % 6 - Local
 
-\newcommand{\entry}[6]{
 	\noindent \large{#3} \hfill \small{\textcolor{Accent}{#6}} \\
 	\textcolor{Accent}{\textbf{\textsc{#4}}} \hfill \textsc{#2} \textcolor{Accent}{-\textrightarrow} \textsc{#1} \\
 	\textcolor{Accent}{\vline} \hspace*{0.1cm}
@@ -42,8 +46,29 @@
 	\vspace*{.5cm}
 }
 
-\newcommand{\skills}[]{
-	
+\newcommand{\skill}[4]{
+% 1. Skill
+% 2. Proficiency
+% 3. Time spent learning
+% 4. Description
+
+	\noindent #1 \hfill #3 \\
+	\begin{minipage}[t]{.30\textwidth}{\footnotesize\scshape\color{gray}
+
+\ifthenelse{\equal{#2}{1}}{
+	\highlight{Iniciante} \hfill Intermediário \hfill Avançado \\
+}{}
+\ifthenelse{\equal{#2}{2}}{
+	Iniciante \hfill \highlight{Intermediário} \hfill Avançado \\
+}{}
+\ifthenelse{\equal{#2}{3}}{
+	Iniciante \hfill Intermediário \hfill \highlight{Avançado} \\
+}{}
+		}		
+		#4
+	\end{minipage}
+
+\vspace*{0.5cm}
 }
 
 % Espaçamento e formatação de seções
