@@ -15,6 +15,7 @@
 \usepackage{amsfonts}
 \usepackage[brazilian]{babel}
 \usepackage{ifthen}
+\usepackage{wasysym}
 
 % \usepackage{tgadventor}
 % \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
@@ -47,28 +48,33 @@
 }
 
 \newcommand{\skill}[4]{
-% 1. Skill
-% 2. Proficiency
-% 3. Time spent learning
-% 4. Description
-
-	\noindent #1 \hfill #3 \\
-	\begin{minipage}[t]{.30\textwidth}{\footnotesize\scshape\color{gray}
-
-\ifthenelse{\equal{#2}{1}}{
-	\highlight{Iniciante} \hfill Intermediário \hfill Avançado \\
-}{}
-\ifthenelse{\equal{#2}{2}}{
-	Iniciante \hfill \highlight{Intermediário} \hfill Avançado \\
-}{}
-\ifthenelse{\equal{#2}{3}}{
-	Iniciante \hfill Intermediário \hfill \highlight{Avançado} \\
-}{}
-		}		
+	% 1. Skill
+	% 2. Proficiency
+	% 3. Time spent learning
+	% 4. Description
+	\noindent
+	\begin{minipage}[t]{.45\textwidth}
+		\noindent #1  
+		\footnotesize\scshape\color{gray}		
+		\ifthenelse{\equal{#2}{1}}{
+			\highlight{\CIRCLE} \CIRCLE \CIRCLE \CIRCLE \CIRCLE 
+		}{}
+		\ifthenelse{\equal{#2}{2}}{
+			\highlight{\CIRCLE \CIRCLE} \CIRCLE \CIRCLE \CIRCLE 
+		}{}
+		\ifthenelse{\equal{#2}{3}}{
+			\highlight{\CIRCLE \CIRCLE \CIRCLE} \CIRCLE \CIRCLE 
+		}{}
+		\ifthenelse{\equal{#2}{4}}{
+			\highlight{\CIRCLE \CIRCLE \CIRCLE \CIRCLE} \CIRCLE 
+		}{}
+		\ifthenelse{\equal{#2}{5}}{
+			\highlight{\CIRCLE \CIRCLE \CIRCLE \CIRCLE \CIRCLE} 
+		}{} \hfill #3 \\
 		#4
 	\end{minipage}
-
-\vspace*{0.5cm}
+					
+	\vspace*{0.5cm}
 }
 
 % Espaçamento e formatação de seções
