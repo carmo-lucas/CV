@@ -27,7 +27,7 @@
 
 %Definindo o comando de entrada de itens
 \newcommand{\highlight}[1]{
-	\textbf{\textcolor{Accent}{#1}}
+	\textcolor{Accent}{#1}%
 }
 
 \newcommand{\entry}[6]{
@@ -44,39 +44,39 @@
 	\begin{minipage}[t]{.75\textwidth}
 		\footnotesize{#5}
 	\end{minipage}
-	\vspace*{.5cm}
+	\vspace*{5mm}
 }
 
-\newcommand{\skill}[4]{
+\newcommand{\skill}[3]{
 	% 1. Skill
 	% 2. Proficiency
-	% 3. Time spent learning
-	% 4. Description
-	\noindent
-	\begin{minipage}[t]{.45\textwidth}
-		\noindent #1  
-		\footnotesize\scshape\color{gray}		
+	% 3. Description
+
+	\noindent \normalsize
+	\begin{minipage}[t]{.48\textwidth}
+		\noindent \textbf{#1} \hfill
+		\color{gray}		
 		\ifthenelse{\equal{#2}{1}}{
-			\highlight{\CIRCLE} \CIRCLE \CIRCLE \CIRCLE \CIRCLE 
-		}{}
-		\ifthenelse{\equal{#2}{2}}{
-			\highlight{\CIRCLE \CIRCLE} \CIRCLE \CIRCLE \CIRCLE 
+			\highlight{\CIRCLE}\CIRCLE\CIRCLE\CIRCLE\CIRCLE 
+			}{}
+			\ifthenelse{\equal{#2}{2}}{
+				\highlight{\CIRCLE \CIRCLE}\CIRCLE\CIRCLE\CIRCLE 
 		}{}
 		\ifthenelse{\equal{#2}{3}}{
-			\highlight{\CIRCLE \CIRCLE \CIRCLE} \CIRCLE \CIRCLE 
+			\highlight{\CIRCLE\CIRCLE\CIRCLE}\CIRCLE\CIRCLE 
 		}{}
 		\ifthenelse{\equal{#2}{4}}{
-			\highlight{\CIRCLE \CIRCLE \CIRCLE \CIRCLE} \CIRCLE 
-		}{}
-		\ifthenelse{\equal{#2}{5}}{
-			\highlight{\CIRCLE \CIRCLE \CIRCLE \CIRCLE \CIRCLE} 
-		}{} \hfill #3 \\
-		#4
-	\end{minipage}
-					
-	\vspace*{0.5cm}
-}
-
+			\highlight{\CIRCLE\CIRCLE\CIRCLE\CIRCLE}\CIRCLE 
+			}{}
+			\ifthenelse{\equal{#2}{5}}{
+				\highlight{\CIRCLE\CIRCLE\CIRCLE\CIRCLE\CIRCLE} 
+				}{} \\
+				\sffamily\color{black}#3
+				\vspace*{5mm}
+			\end{minipage}
+			\hfill
+			}
+			
 % Espaçamento e formatação de seções
 % Estilo de Section
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}%
@@ -85,7 +85,6 @@
 		\textcolor{Accent} % Cor do texto do título.
 		{\titlerule} % Adiciona linha abaixo do título.
 	]
-
 
 \titlespacing{\section}{0pt}{0pt}{0pt}
 
