@@ -53,29 +53,28 @@
 	% 3. Description
 
 	\noindent \normalsize
-	\begin{minipage}[t]{.48\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
 		\noindent \textbf{#1} \hfill
 		\color{gray}		
 		\ifthenelse{\equal{#2}{1}}{
 			\highlight{\CIRCLE}\CIRCLE\CIRCLE\CIRCLE\CIRCLE 
 			}{}
-			\ifthenelse{\equal{#2}{2}}{
-				\highlight{\CIRCLE \CIRCLE}\CIRCLE\CIRCLE\CIRCLE 
-		}{}
+		\ifthenelse{\equal{#2}{2}}{
+			\highlight{\CIRCLE\CIRCLE}\CIRCLE\CIRCLE\CIRCLE 
+			}{}
 		\ifthenelse{\equal{#2}{3}}{
 			\highlight{\CIRCLE\CIRCLE\CIRCLE}\CIRCLE\CIRCLE 
-		}{}
+			}{}
 		\ifthenelse{\equal{#2}{4}}{
 			\highlight{\CIRCLE\CIRCLE\CIRCLE\CIRCLE}\CIRCLE 
 			}{}
-			\ifthenelse{\equal{#2}{5}}{
-				\highlight{\CIRCLE\CIRCLE\CIRCLE\CIRCLE\CIRCLE} 
-				}{} \\
-				\sffamily\color{black}#3
-				\vspace*{5mm}
-			\end{minipage}
-			\hfill
-			}
+		\ifthenelse{\equal{#2}{5}}{
+			\highlight{\CIRCLE\CIRCLE\CIRCLE\CIRCLE\CIRCLE} 
+			}{} \\
+			\sffamily\color{black}#3
+			\vspace*{5mm}
+\end{minipage}
+}
 			
 % Espaçamento e formatação de seções
 % Estilo de Section
