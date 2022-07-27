@@ -23,7 +23,8 @@
 \usepackage[default]{sourcesanspro}
 \usepackage[T1]{fontenc}
 
-
+% Remover todas as indentações
+\setlength\parindent{0pt}
 
 %Definindo o comando de entrada de itens
 \newcommand{\highlight}[1]{
@@ -38,7 +39,7 @@
 % 5 - Descrição
 % 6 - Local
 
-	\noindent \large{#3} \hfill \small{\textcolor{Accent}{#6}} \\
+	\large{#3} \hfill \small{\textcolor{Accent}{#6}} \\
 	\textcolor{Accent}{\textbf{\textsc{#4}}} \hfill \textsc{#2} \textcolor{Accent}{-\textrightarrow} \textsc{#1} \\
 	\textcolor{Accent}{\vline} \hspace*{0.1cm}
 	\begin{minipage}[t]{.75\textwidth}
@@ -51,10 +52,9 @@
 	% 1. Skill
 	% 2. Proficiency
 	% 3. Description
-
-	\noindent \normalsize
-\begin{minipage}[t]{0.5\textwidth}
-		\noindent \textbf{#1} \hfill
+\begin{minipage}[t]{0.48\textwidth}
+	\normalsize 
+		\textbf{#1} \hfill
 		\color{gray}		
 		\ifthenelse{\equal{#2}{1}}{
 			\highlight{\CIRCLE}\CIRCLE\CIRCLE\CIRCLE\CIRCLE 
