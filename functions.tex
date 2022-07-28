@@ -1,0 +1,59 @@
+%Definindo o comando de entrada de itens
+\newcommand{\highlight}[1]{
+	\textcolor{Accent}{#1}%
+}
+
+\newcommand{\entry}[6]{
+% 1 - Data final
+% 2 - Data inicial
+% 3 - Cargo
+% 4 - Empresa / Instituição
+% 5 - Descrição
+% 6 - Local
+
+	\large{#3} \hfill \small{\textcolor{Accent}{#6}} \\
+	\textcolor{Accent}{\textbf{\textsc{#4}}} \hfill \textsc{#2} \textcolor{Accent}{-\textrightarrow} \textsc{#1} \\
+	\textcolor{Accent}{\vline} \hspace*{0.1cm}
+	\begin{minipage}[t]{.75\textwidth}
+		\footnotesize{#5}
+	\end{minipage}
+	\vspace*{5mm}
+}
+
+\newcommand{\skill}[3]{
+	% 1. Skill
+	% 2. Proficiency
+	% 3. Description
+\begin{minipage}[t]{0.48\textwidth}
+	\normalsize 
+		\textbf{#1} \hfill
+		\color{lightgray}
+		\ifthenelse{\equal{#2}{1}}{
+			\highlight{\CIRCLE}\CIRCLE\CIRCLE\CIRCLE\CIRCLE 
+			}{}
+		\ifthenelse{\equal{#2}{2}}{
+			\highlight{\CIRCLE\CIRCLE}\CIRCLE\CIRCLE\CIRCLE 
+			}{}
+		\ifthenelse{\equal{#2}{3}}{
+			\highlight{\CIRCLE\CIRCLE\CIRCLE}\CIRCLE\CIRCLE 
+			}{}
+		\ifthenelse{\equal{#2}{4}}{
+			\highlight{\CIRCLE\CIRCLE\CIRCLE\CIRCLE}\CIRCLE 
+			}{}
+		\ifthenelse{\equal{#2}{5}}{
+			\highlight{\CIRCLE\CIRCLE\CIRCLE\CIRCLE\CIRCLE} 
+			}{} \\
+			\sffamily\color{black}#3
+			\vspace*{5mm}
+\end{minipage}
+}
+% Espaçamento e formatação de seções
+% Estilo de Section
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}%
+	[
+		\vspace*{-0.667\baselineskip} % Espaço vertical entre texto do título e titlerule.
+		\textcolor{Accent} % Cor do texto do título.
+		{\titlerule} % Adiciona linha abaixo do título.
+	]
+
+\titlespacing{\section}{0pt}{0pt}{0pt}
